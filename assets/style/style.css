@@ -1,3 +1,20 @@
+
+#exercise {
+    width: 824px;
+    height: 136px;
+    background-color: pink;
+    border: 1px solid blue;
+    margin: 10px;
+  }
+
+  #group {
+    width: 824px;
+    height: 600px;
+    background-color: pink;
+    border: 1px solid blue;
+    margin: 10px;
+  }
+
 .navbar {
     background-color: #000407;
 }
@@ -5,3 +22,4 @@
 .navbar h1 {
     color: #F5F7F7;
 }
+
