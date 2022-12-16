@@ -21,7 +21,10 @@
 
 .navbar h1 {
     color: #F5F7F7;
-    font-family: sans-serif;
-    -webkit-text-stroke: 0.5px  #FA5252;
+    font-family: Roboto, sans-serif;
+}
+
+.navbar img {
+    margin-left: 10px;
 }
 
