@@ -1,3 +1,4 @@
+
 #exercise {
     width: 824px;
     height: 136px;
@@ -13,3 +14,12 @@
     border: 1px solid blue;
     margin: 10px;
   }
+
+.navbar {
+    background-color: #000407;
+}
+
+.navbar h1 {
+    color: #F5F7F7;
+}
+
