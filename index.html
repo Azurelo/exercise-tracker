@@ -14,20 +14,21 @@
         <img src="assets/images/weighlifting50.png" alt="weighlifting">
         <h1 class="ml-3 is-size-1 is-vcentered">Exercise Tracker</h1>
     </nav>
-    <div>
-        <div id="exercise">
+    <div class="container">
+    <div class="type-muscle-container">
+    <div class="left-box" id="exercise">
             <h6>Type of exercise</h6>
-            <div class="control">
-                <div class="select">
+            <!-- <div class="control"> -->
+                <div class="left-box select">
                     <select>
                         <Option>Select Muscle Group</Option>
                     </select>
                 </div>
-            </div>
+            <!-- <div>/ -->
         </div>
-        <div id="group">Muscle Group</div>
+        <div class="box left-box" id="group">Muscle Group</div>
     </div> 
-    <div class="box">
+    <div class="box right-box">
         <ul>
             <li><input type="checkbox"> Monday</li>
             <hr>
@@ -39,6 +40,7 @@
             <hr>
             <li><input type="checkbox"> Friday</li>
         </ul>          
+    </div>
     </div>
     <script src="assets/js/script.js"></script>
 </body>
