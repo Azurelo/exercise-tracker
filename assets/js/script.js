@@ -1,10 +1,10 @@
 var fetchButton = document.getElementById('fetch-button');
-
+var exerciseList = document.querySelector('h6');
 var muscle = 'biceps'
 $.ajax({
     method: 'GET',
     url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + muscle,
-    headers: { 'X-Api-Key': 'YOUR_API_KEY'},
+    headers: { 'X-Api-Key': '7DGececzTtM8jvX/CMqceA==aWqKYpkbiPlSIPUq'},
     contentType: 'application/json',
     success: function(result) {
         console.log(result);
@@ -14,43 +14,19 @@ $.ajax({
     }
 });
 
-/* for (var i = 0; i < data.length; i++) {
+
+
+
+for (var i = 0; i < result.length; i++) {
     // Creating elements, tablerow, tabledata, and anchor
-    var createTableRow = document.createElement('tr');
-    var tableData = document.createElement('td');
+    var createExerciseBtn = document.createElement('button');
+    var exerciseData = document.createElement('div');
     var link = document.createElement('a');
 
     // Setting the text of link and the href of the link
-    link.textContent = data[i].html_url;
-    link.href = data[i].html_url;
+    exerciseData.textContent = data[i].name + '|' + data[i].difficulty;
 
     // Appending the link to the tabledata and then appending the tabledata to the tablerow
     // The tablerow then gets appended to the tablebody
-    tableData.appendChild(link);
-    createTableRow.appendChild(tableData);
-    tableBody.appendChild(createTableRow);
- */
-
-
-    //or this
-
-/*     function getApi() {
-        // replace `octocat` with anyone else's GitHub username
-        var requestUrl = 'https://api.github.com/users/octocat/repos';
-      
-        fetch(requestUrl)
-          .then(function (response) {
-            return response.json();
-          })
-          .then(function (data) {
-            for (var i = 0; i < data.length; i++) {
-              var listItem = document.createElement('li');
-              listItem.textContent = data[i].html_url;
-              repoList.appendChild(listItem);
-            }
-          });
-      }
-      
-      fetchButton.addEventListener('click', getApi); */
-      
-fetchButton.addEventListener('click', getApi);
+    createExerciseBtn.appendChild(exerciseData);
+   exerciseList.appendChild(createExerciseBtn);}
