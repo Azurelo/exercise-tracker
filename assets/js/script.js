@@ -12,21 +12,22 @@ $.ajax({
     error: function ajaxError(jqXHR) {
         console.error('Error: ', jqXHR.responseText);
     }
+}).then(function (result) {
+  for (var i = 0; i < result.length; i++) {
+    // Creating elements, tablerow, tabledata, and anchor
+    var createExerciseBtn = document.createElement('button');
+    var exerciseData = document.createElement('div');
+
+  
+    // Setting the text of link and the href of the link
+    exerciseData.textContent = data[i].name + '|' + data[i].difficulty;
+  
+    // Appending the link to the tabledata and then appending the tabledata to the tablerow
+    // The tablerow then gets appended to the tablebody
+    createExerciseBtn.appendChild(exerciseData);
+   exerciseList.appendChild(createExerciseBtn);}
 });
 
 
 
 
-for (var i = 0; i < result.length; i++) {
-    // Creating elements, tablerow, tabledata, and anchor
-    var createExerciseBtn = document.createElement('button');
-    var exerciseData = document.createElement('div');
-    var link = document.createElement('a');
-
-    // Setting the text of link and the href of the link
-    exerciseData.textContent = data[i].name + '|' + data[i].difficulty;
-
-    // Appending the link to the tabledata and then appending the tabledata to the tablerow
-    // The tablerow then gets appended to the tablebody
-    createExerciseBtn.appendChild(exerciseData);
-   exerciseList.appendChild(createExerciseBtn);}
