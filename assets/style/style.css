@@ -25,6 +25,11 @@
 
 .navbar h1 {
     color: #F5F7F7;
+    font-family: Roboto, sans-serif;
+}
+
+.navbar img {
+    margin-left: 10px;
 }
 
 .box {
