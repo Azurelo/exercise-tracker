@@ -34,11 +34,12 @@ hr {
   margin-top: 15px;
   width: 50vw;
   height: 100vh;
-  
 }
 
 .left-box {
-  width:50vw;
+  display: flex;
+  flex-direction: column;
+  width:10vw;
   height:50vh;
 }
 
@@ -47,8 +48,10 @@ hr {
 }
 
 select {
+  display: block;
   font-size: 16px;
   padding: 5px;
+  margin-bottom: 5px;
 }
 
 .button-grid {
