@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/style.css">
-    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Exercise Tracker</title>
 </head>
 <body class="has-background-image is-background-fixed" style="background-image: url('assets/images/gymbackground.jpg'); background-size: cover; background-position: center;">
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -49,6 +50,7 @@
                     </select>
                 </div>
         </div>
+
         <div class="left-box button-grid" id="group">
            <button class="button">
             <h3 class="btn-heading">Button heading</h3>
@@ -92,6 +94,8 @@
            </button>
         </div>
     </div> 
+
+    <!-- Our Drag and Drop Area -->
     <div class="right-box">
         <ul>
             <li>Monday</li>
@@ -103,7 +107,13 @@
             <li>Thursday</li>
             <hr>
             <li>Friday</li>
-        </ul>          
+        </ul>
+        
+        <div class="savedList">        
+            <h4>
+                Saved Exercises List
+            </h4
+        ></div>
     </div>
     </div>
     <script src="assets/js/script.js"></script>
