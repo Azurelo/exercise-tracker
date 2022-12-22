@@ -1,6 +1,6 @@
 var fetchButton = document.getElementById('fetch-button');
 var exerciseList = document.querySelector('h6');
-var exerciseListSearch = document.getElementById('searchResults');
+var exerciseListSearch = document.getElementById('group');
 
 
 var muscle = 'biceps'
@@ -45,7 +45,7 @@ $.ajax({
   let selectedOption3;
 
   // Add change event listeners to the dropdown elements
-  dropdown1.addEventListener('change', function() {
+ /*  dropdown1.addEventListener('change', function() {
     selectedOption1 = this.value;
   });
   dropdown2.addEventListener('change', function() {
@@ -53,7 +53,7 @@ $.ajax({
   });
   dropdown3.addEventListener('change', function() {
     selectedOption3 = this.value;
-  });
+  }); */
 
 
 
