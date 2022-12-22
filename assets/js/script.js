@@ -1,6 +1,11 @@
 var fetchButton = document.getElementById('fetch-button');
 var exerciseList = document.querySelector('h6');
+var exerciseListSearch = document.getElementById('searchResults');
+
+
 var muscle = 'biceps'
+
+//fetch request using data from dropdowns when search button is pressed
 $.ajax({
     method: 'GET',
     url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + muscle,
@@ -20,13 +25,16 @@ $.ajax({
 
   
     // Setting the text of link and the href of the link
-    exerciseData.textContent = data[i].name + '|' + data[i].difficulty;
+    exerciseData.textContent = result[i].name + '|' + result[i].difficulty;
   
     // Appending the link to the tabledata and then appending the tabledata to the tablerow
     // The tablerow then gets appended to the tablebody
     createExerciseBtn.appendChild(exerciseData);
-   exerciseList.appendChild(createExerciseBtn);}
+   exerciseListSearch.appendChild(createExerciseBtn);}
+   
 });
+
+
 
 
 
