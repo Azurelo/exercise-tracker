@@ -10,25 +10,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Exercise Tracker</title>
 </head>
-<body>
+<body class="has-background-image is-background-fixed" style="background-image: url('assets/images/gymbackground.jpg'); background-size: cover; background-position: center;">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <img src="assets/images/weighlifting50.png" alt="weighlifting">
         <h1 class="ml-3 is-size-1 is-vcentered">Exercise Tracker</h1>
     </nav>
-    <div>
-        <div id="exercise">
+    <div class="main-container">
+    <div class="type-muscle-container">
+    <div class="left-box" id="exercise">
             <h6>Type of exercise</h6>
-            <div class="control">
-                <div class="select">
+                <div class="left-box">
                     <select>
                         <Option>Select Muscle Group</Option>
+                        <option>abdominals</option>
+                        <option>abductors</option>
+                        <option>adductors</option>
+                        <option>biceps</option>
+                        <option>calves</option>
+                        <option>chest</option>
+                        <option>forearms</option>
+                        <option>glutes</option>
+                        <option>hamstrings</option>
+                        <option>lats</option>
+                        <option>lower_back</option>
+                        <option>middle_back</option>
+                        <option>neck</option>
+                        <option>quadriceps</option>
+                        <option>traps</option>
+                        <option>triceps</option>
                     </select>
                 </div>
-            </div>
         </div>
-        <div id="group">Muscle Group</div>
+        <div class="left-box" id="group">Muscle Group</div>
     </div> 
-    <div class="box">
+    <div class="right-box">
         <ul>
             <li><input type="checkbox"> Monday</li>
             <hr>
@@ -40,6 +55,7 @@
             <hr>
             <li><input type="checkbox"> Friday</li>
         </ul>          
+    </div>
     </div>
     <script src="assets/js/script.js"></script>
 </body>
