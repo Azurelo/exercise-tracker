@@ -89,3 +89,15 @@ select {
   line-height: 1.5;
   word-wrap: break-word;
 }
+
+#exercise{
+  padding-top: 10%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+select{
+  width: 100%;
+}
