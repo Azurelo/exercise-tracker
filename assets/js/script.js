@@ -34,7 +34,26 @@ $.ajax({
    
 });
 
+  // Get a reference to the dropdown elements
+  const dropdown1 = document.getElementById('dropdown1');
+  const dropdown2 = document.getElementById('dropdown2');
+  const dropdown3 = document.getElementById('dropdown3');
 
+  // Create variables to store the selected options
+  let selectedOption1;
+  let selectedOption2;
+  let selectedOption3;
+
+  // Add change event listeners to the dropdown elements
+  dropdown1.addEventListener('change', function() {
+    selectedOption1 = this.value;
+  });
+  dropdown2.addEventListener('change', function() {
+    selectedOption2 = this.value;
+  });
+  dropdown3.addEventListener('change', function() {
+    selectedOption3 = this.value;
+  });
 
 
 
