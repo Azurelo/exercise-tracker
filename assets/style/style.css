@@ -27,7 +27,7 @@ hr {
 
 .type-muscle-container {
   width: 50%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .right-box {
@@ -37,7 +37,7 @@ hr {
 }
 
 .left-box {
-  height:50vh;
+  height:30vh;
   float: left;
 }
 
@@ -55,8 +55,24 @@ select {
 .button-grid {
  display: grid;
  grid-template-columns: repeat(2, 1fr);
- grid-template-rows: repeat(5, auto);
  gap: 10px;
+ width:100%;
+}
+
+@media (max-width:615px) {
+  .main-container {
+    display: inline;
+  }
+  .type-muscle-container{
+   width: 100vw;
+  }
+  .button-grid {
+    grid-template-columns: 1fr;
+    width: 100vw;
+  }
+  .right-box{
+    width: 100vw;
+  }
 }
 
 .button {
@@ -92,7 +108,7 @@ select {
 }
 
 #exercise{
-  padding-top: 10%;
+  padding-top: 2%;
   flex-direction: column;
   display: flex;
   align-items: flex-start;
@@ -127,4 +143,3 @@ select{
   border-radius: 5px;
 
 }
-
