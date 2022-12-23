@@ -21,6 +21,7 @@ $.ajax({
   for (var i = 0; i < result.length; i++) {
     // Creating elements, tablerow, tabledata, and anchor
     var createExerciseBtn = document.createElement('button');
+    createExerciseBtn.classList.add("button")
     var exerciseData = document.createElement('div');
 
   
@@ -55,6 +56,46 @@ $.ajax({
     selectedOption3 = this.value;
   }); */
 
+    // Get the card and the dropzones
+    var card = document.getElementById("card");
+    var dropzones = document.querySelectorAll(".dropzone");
+  
+    // Add the "draggable" attribute to the card
+    card.setAttribute("draggable", "true");
+  
+    // Add the dragstart event listener to the card
+    card.addEventListener("dragstart", function(event) {
+      // Set the data type and the value of the drag data
+      event.dataTransfer.setData("text/plain", event.target.id);
+    });
+  
+    // Add the dragover event listener to the dropzones
+    dropzones.forEach(function(dropzone) {
+      dropzone.addEventListener("dragover", function(event) {
+        // Prevent the default behavior (prevent the card from being dropped outside of the dropzone)
+        event.preventDefault();
+      });
+    });
+  
+    // Add the drop event listener to the dropzones
+    dropzones.forEach(function(dropzone) {
+      dropzone.addEventListener("drop", function(event) {
+        // Prevent the default behavior (prevent the card from being dropped outside of the dropzone)
+        event.preventDefault();
+  
+        // Get the data type and the value of the drag data
+        var data = event.dataTransfer.getData("text/plain");
+  
+        // Append the card to the dropzone
+        event.target.appendChild(document.getElementById(data));
+      });
+    });
+
+  
+  
+  
+  
+  
 
 
 
