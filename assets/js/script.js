@@ -1,14 +1,42 @@
 var fetchButton = document.getElementById('fetch-button');
 var exerciseList = document.querySelector('h6');
 var exerciseListSearch = document.getElementById('group');
-
-
+var searchButton = document.getElementById('x-search');
 var muscle = 'biceps'
 
 //fetch request using data from dropdowns when search button is pressed
-$.ajax({
+
+  // Get a reference to the dropdown elements
+  const dropdown1 = document.getElementById('dropdown1');
+  const dropdown2 = document.getElementById('dropdown2');
+  const dropdown3 = document.getElementById('dropdown3');
+
+  // Create variables to store the selected options
+  let selectedOption1;
+  let selectedOption2;
+  let selectedOption3;
+
+  // Add change event listeners to the dropdown elements
+  dropdown1.addEventListener('change', function() {
+    selectedOption1 = this.value;
+  });
+  dropdown2.addEventListener('change', function() {
+    selectedOption2 = this.value;
+  });
+  dropdown3.addEventListener('change', function() {
+    selectedOption3 = this.value;
+  });
+
+  function clearButtons(){
+    
+  }
+  
+searchButton.addEventListener('click', function(){
+  clearButtons();
+  console.log('pizza Time');
+  $.ajax({
     method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + muscle,
+    url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + selectedOption1,
     headers: { 'X-Api-Key': '7DGececzTtM8jvX/CMqceA==aWqKYpkbiPlSIPUq'},
     contentType: 'application/json',
     success: function(result) {
@@ -34,27 +62,7 @@ $.ajax({
    exerciseListSearch.appendChild(createExerciseBtn);}
    
 });
-
-  // Get a reference to the dropdown elements
-  const dropdown1 = document.getElementById('dropdown1');
-  const dropdown2 = document.getElementById('dropdown2');
-  const dropdown3 = document.getElementById('dropdown3');
-
-  // Create variables to store the selected options
-  let selectedOption1;
-  let selectedOption2;
-  let selectedOption3;
-
-  // Add change event listeners to the dropdown elements
-  dropdown1.addEventListener('change', function() {
-    selectedOption1 = this.value;
-  });
-  dropdown2.addEventListener('change', function() {
-    selectedOption2 = this.value;
-  });
-  dropdown3.addEventListener('change', function() {
-    selectedOption3 = this.value;
-  });
+})
 
     // Get the card and the dropzones
   // Get the card, the dropzones, and the original div
