@@ -101,3 +101,7 @@ select {
 select{
   width: 100%;
 }
+
+.x-search{
+  margin-left: 35% ;
+}
