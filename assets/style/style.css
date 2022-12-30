@@ -29,6 +29,16 @@ hr {
   width: 50%;
 }
 
+img {
+  max-width: 50%;
+  padding: 5%;
+}
+
+btnClick {
+  padding: 30%;
+  box-sizing: border-box;
+}
+
 .right-box {
   margin-top: 15px;
   width: 50vw;

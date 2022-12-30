@@ -42,6 +42,7 @@ searchButton.addEventListener('click', function(){
     success: function(result) {
         console.log(result);
     },
+
     error: function ajaxError(jqXHR) {
         console.error('Error: ', jqXHR.responseText);
     }
@@ -109,6 +110,17 @@ searchButton.addEventListener('click', function(){
     // Append the card to the original div
     originalDiv.appendChild(card);
   });
+
+  let btn = document.getElementById('btnClick');
+let image = document.getElementById('image');
+btn.addEventListener('click', function () {
+      fetch("https://dog.ceo/api/breeds/image/random")
+        .then(Response => Response.json())
+        .then(result => {
+          console.log(result);
+          image.src = result.message;
+          });
+      });
 
   
   
