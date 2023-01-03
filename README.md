@@ -12,7 +12,8 @@ and learn the workflow of GitHub while collaborating with others
 https://azurelo.github.io/exercise-tracker/
 
 ## Snapshots
-![image](https://user-images.githubusercontent.com/114710827/206786890-6f4a202b-947b-4bbf-a4d5-8d08919837a0.png)
+![Screenshot_20230102_113538](https://user-images.githubusercontent.com/114710827/210291204-ffedca19-3f1b-47ab-ba95-86adcd38c9c5.png)
+
 
 This website can be used to find and save exercises to use for
 a 5 day schedule.
