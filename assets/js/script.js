@@ -56,7 +56,7 @@ searchButton.addEventListener('click', function(){
 
   
     // Setting the text of link and the href of the link
-    exerciseData.textContent = result[i].name + '|' + result[i].difficulty;
+    exerciseData.textContent = result[i].name + ' | ' + result[i].difficulty;
   
     // Appending the link to the tabledata and then appending the tabledata to the tablerow
     // The tablerow then gets appended to the tablebody
