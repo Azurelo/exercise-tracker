@@ -1,6 +1,10 @@
 body {
   color: white;
 }
+
+h6{
+  text-align: center;
+}
 .navbar {
     display: flex;
     background-color: #000407;
@@ -29,13 +33,14 @@ hr {
   width: 50%;
 }
 
-img {
-  max-width: 50%;
+#image {
+  width: 75%;
+  max-height: 400px;
   padding: 5%;
 }
 
-btnClick {
-  padding: 30%;
+.btnClick {
+  padding: 10%;
   box-sizing: border-box;
 }
 
@@ -65,18 +70,16 @@ select {
  display: grid;
  grid-template-columns: repeat(2, 1fr);
  gap: 10px;
- width:100%;
+ width: 80%;
 }
 
 .button {
-  display: flex;
   align-items: center;
   background-color: #fff;
   color: black;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
-  word-wrap: break-word;
   width: 80%;
   margin: auto;
 }
@@ -101,8 +104,8 @@ select {
 }
 
 #exercise{
+  justify-content: space-evenly;
   padding-top: 2%;
-  flex-direction: column;
   display: flex;
   align-items: flex-start;
   margin-left: 5%;
@@ -145,6 +148,10 @@ select{
   border-radius: 5px;
 
 }
+
+.type-muscle-container{
+  height: auto;
+ }
 
 @media (max-width:615px) {
   .main-container {
