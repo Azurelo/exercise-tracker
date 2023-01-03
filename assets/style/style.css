@@ -30,7 +30,7 @@ hr {
 }
 
 #image {
-  width: 25%;
+  width: 75%;
   max-height: 400px;
   padding: 5%;
 }
@@ -102,8 +102,8 @@ select {
 }
 
 #exercise{
+  justify-content: space-evenly;
   padding-top: 2%;
-  flex-direction: column;
   display: flex;
   align-items: flex-start;
   margin-left: 5%;
@@ -146,6 +146,10 @@ select{
   border-radius: 5px;
 
 }
+
+.type-muscle-container{
+  height: auto;
+ }
 
 @media (max-width:615px) {
   .main-container {

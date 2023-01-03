@@ -2,7 +2,6 @@ var fetchButton = document.getElementById('fetch-button');
 var exerciseList = document.querySelector('h6');
 var exerciseListSearch = document.getElementById('group');
 var searchButton = document.getElementById('x-search');
-var muscle = 'biceps'
 
 //fetch request using data from dropdowns when search button is pressed
 
@@ -12,9 +11,9 @@ var muscle = 'biceps'
   const dropdown3 = document.getElementById('dropdown3');
 
   // Create variables to store the selected options
-  let selectedOption1;
-  let selectedOption2;
-  let selectedOption3;
+  let selectedOption1 ='';
+  let selectedOption2 ='';
+  let selectedOption3 ='';
 
   // Add change event listeners to the dropdown elements
   dropdown1.addEventListener('change', function() {
@@ -28,7 +27,9 @@ var muscle = 'biceps'
   });
 
   function clearButtons(){
-    
+    while (exerciseListSearch.firstChild) {
+      exerciseListSearch.removeChild(exerciseListSearch.firstChild);
+    }
   }
   
 searchButton.addEventListener('click', function(){
@@ -36,7 +37,7 @@ searchButton.addEventListener('click', function(){
   console.log('pizza Time');
   $.ajax({
     method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + selectedOption1,
+    url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + selectedOption1 + '&type=' + selectedOption2 + '&difficulty=' + selectedOption3,
     headers: { 'X-Api-Key': '7DGececzTtM8jvX/CMqceA==aWqKYpkbiPlSIPUq'},
     contentType: 'application/json',
     success: function(result) {
