@@ -29,13 +29,14 @@ hr {
   width: 50%;
 }
 
-img {
-  max-width: 50%;
+#image {
+  width: 25%;
+  max-height: 400px;
   padding: 5%;
 }
 
-btnClick {
-  padding: 30%;
+.btnClick {
+  padding: 10%;
   box-sizing: border-box;
 }
 
