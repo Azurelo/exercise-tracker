@@ -47,12 +47,12 @@ hr {
 .right-box {
   margin-top: 15px;
   width: 50vw;
-  height: 100vh;
 }
 
 .left-box {
   height:30vh;
   float: left;
+  padding-top: 5%;
 }
 
 .left-box, .right-box {
@@ -157,7 +157,18 @@ select{
 .type-muscle-container{
   height: auto;
  }
+@media(max-width:1400px){
+  .main-container {
+    flex-direction: column;
 
+  }
+  .right-box{
+    width: 100%;
+  }
+  .type-muscle-container{
+    width: 100%;
+  }
+}
 @media (max-width:730px) {
   .main-container {
     display: inline;
