@@ -53,8 +53,6 @@ searchButton.addEventListener('click', function(){
     var createExerciseBtn = document.createElement('button');
     createExerciseBtn.classList.add("button")
     createExerciseBtn.setAttribute('id','xbutton' + i);
-    createExerciseBtn.setAttribute('data-cardNumber', i)
-    createExerciseBtn.setAttribute("draggable", "true");
     var exerciseData = document.createElement('div');
 
   
@@ -121,7 +119,7 @@ searchButton.addEventListener('click', function(){
 });
 })
 
-  var cards = document.querySelectorAll(".card");
+
     // Get the card and the dropzones
   // Get the card, the dropzones, and the original div
   var card = document.getElementById("card");
@@ -178,18 +176,23 @@ btn.addEventListener('click', function () {
           image.src = result.message;
           });
       });
-
+      var counter = 0;
       function saveButtonContent(button) {
+        button.classList.add("hidden");
         console.log("Chicken")
-        
         if (originalDiv.childNodes.length < 15){
         // Get the content of the button
         var buttonContent = button.innerHTML;
-      
+        
         // Create a new card element
         var newCard = document.createElement("div");
         newCard.classList.add("card");
-      
+        newCard.setAttribute('id', counter);
+        newCard.setAttribute("draggable","true");
+        newCard.addEventListener("dragstart", function(event) {
+          // Set the data type and the value of the drag data
+          event.dataTransfer.setData("text/plain", event.target.id);
+        }); 
         // Add the button content to the card
         newCard.innerHTML = buttonContent;
       
@@ -198,8 +201,21 @@ btn.addEventListener('click', function () {
       
         // Save the button content to local storage using the button's id as the key
         localStorage.setItem(button.id, buttonContent);
+        counter++;
+        newCard.addEventListener("contextmenu", function(event) {
+          // Prevent the default behavior (prevent the context menu from being displayed)
+          event.preventDefault();
+      
+          // Append the card to the original div
+          originalDiv.appendChild(newCard);
+        });
       } }
 
 
 
+/* function populateFromStorage(){
+  localStorage.getItem();
+}
 
+populateFromStorage();
+ */
