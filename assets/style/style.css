@@ -79,6 +79,9 @@ select {
  width: 80%;
  margin: 0px;
 }
+.hidden{
+  display: none;
+}
 
 .button {
   align-items: center;
