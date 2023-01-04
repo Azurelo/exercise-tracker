@@ -1,5 +1,11 @@
 body {
   color: white;
+  background-color: black;
+}
+footer{
+  color: black;
+  height: 500px;
+  width: 100%;
 }
 
 h6{
