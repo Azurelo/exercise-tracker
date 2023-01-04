@@ -53,7 +53,8 @@ searchButton.addEventListener('click', function(){
     var createExerciseBtn = document.createElement('button');
     createExerciseBtn.classList.add("button")
     createExerciseBtn.setAttribute('id','xbutton' + i);
-
+    createExerciseBtn.setAttribute('data-cardNumber', i)
+    createExerciseBtn.setAttribute("draggable", "true");
     var exerciseData = document.createElement('div');
 
   
@@ -120,6 +121,7 @@ searchButton.addEventListener('click', function(){
 });
 })
 
+  var cards = document.querySelectorAll(".card");
     // Get the card and the dropzones
   // Get the card, the dropzones, and the original div
   var card = document.getElementById("card");
@@ -166,7 +168,7 @@ searchButton.addEventListener('click', function(){
     originalDiv.appendChild(card);
   });
 
-  let btn = document.getElementById('btnClick');
+let btn = document.getElementById('btnClick');
 let image = document.getElementById('image');
 btn.addEventListener('click', function () {
       fetch("https://dog.ceo/api/breeds/image/random")
@@ -179,22 +181,24 @@ btn.addEventListener('click', function () {
 
       function saveButtonContent(button) {
         console.log("Chicken")
+        
+        if (originalDiv.childNodes.length < 15){
         // Get the content of the button
         var buttonContent = button.innerHTML;
       
         // Create a new card element
-        var card = document.createElement("div");
-        card.classList.add("card");
+        var newCard = document.createElement("div");
+        newCard.classList.add("card");
       
         // Add the button content to the card
-        card.innerHTML = buttonContent;
+        newCard.innerHTML = buttonContent;
       
         // Append the card to the body of the document
-        document.body.appendChild(card);
+        originalDiv.appendChild(newCard);
       
         // Save the button content to local storage using the button's id as the key
         localStorage.setItem(button.id, buttonContent);
-      } 
+      } }
 
 
 
