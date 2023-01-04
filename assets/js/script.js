@@ -34,7 +34,7 @@ var searchButton = document.getElementById('x-search');
   
 searchButton.addEventListener('click', function(){
   clearButtons();
-  console.log('pizza Time');
+
   $.ajax({
     method: 'GET',
     url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + selectedOption1 + '&type=' + selectedOption2 + '&difficulty=' + selectedOption3,
@@ -52,6 +52,8 @@ searchButton.addEventListener('click', function(){
     // Creating elements, tablerow, tabledata, and anchor
     var createExerciseBtn = document.createElement('button');
     createExerciseBtn.classList.add("button")
+    createExerciseBtn.setAttribute('id','xbutton' + i);
+
     var exerciseData = document.createElement('div');
 
   
@@ -62,6 +64,58 @@ searchButton.addEventListener('click', function(){
     // The tablerow then gets appended to the tablebody
     createExerciseBtn.appendChild(exerciseData);
    exerciseListSearch.appendChild(createExerciseBtn);}
+
+   var button0 = document.getElementById("xbutton0");
+   if(button0){
+     console.log("chicken")
+   button0.addEventListener("click", function() {
+     saveButtonContent(this);
+   });}
+   var button1 = document.getElementById("xbutton1");
+   if(button1){
+   button1.addEventListener("click", function() {
+     saveButtonContent(this);
+   });}
+   var button2 = document.getElementById("xbutton2");
+   if(button2){
+   button2.addEventListener("click", function() {
+     saveButtonContent(this);
+   });}
+   var button3 = document.getElementById("xbutton3");
+   if(button3){
+   button3.addEventListener("click", function() {
+     saveButtonContent(this);
+   });}
+   var button4 = document.getElementById("xbutton4");
+   if(button4){
+   button4.addEventListener("click", function() {
+     saveButtonContent(this);
+   });}
+   var button5 = document.getElementById("xbutton5");
+   if(button5){
+   button5.addEventListener("click", function() {
+     saveButtonContent(this);
+   });}
+   var button6 = document.getElementById("xbutton6");
+   if(button6){
+   button6.addEventListener("click", function() {
+     saveButtonContent(this);
+   });}
+   var button7 = document.getElementById("xbutton7");
+   if(button7){
+   button7.addEventListener("click", function() {
+     saveButtonContent(this);
+   });}  
+   var button8 = document.getElementById("xbutton8");
+   if(button8){
+   button8.addEventListener("click", function() {
+     saveButtonContent(this);
+   });}  
+   var button9 = document.getElementById("xbutton9");
+   if(button9){
+   button9.addEventListener("click", function() {
+     saveButtonContent(this);
+   });}
    
 });
 })
@@ -123,11 +177,25 @@ btn.addEventListener('click', function () {
           });
       });
 
-  
-  
-  
-  
-  
+      function saveButtonContent(button) {
+        console.log("Chicken")
+        // Get the content of the button
+        var buttonContent = button.innerHTML;
+      
+        // Create a new card element
+        var card = document.createElement("div");
+        card.classList.add("card");
+      
+        // Add the button content to the card
+        card.innerHTML = buttonContent;
+      
+        // Append the card to the body of the document
+        document.body.appendChild(card);
+      
+        // Save the button content to local storage using the button's id as the key
+        localStorage.setItem(button.id, buttonContent);
+      } 
+
 
 
 
