@@ -12,7 +12,7 @@ and learn the workflow of GitHub while collaborating with others
 https://azurelo.github.io/exercise-tracker/
 
 ## Snapshots
-![Screenshot_20230102_113538](https://user-images.githubusercontent.com/114710827/210291204-ffedca19-3f1b-47ab-ba95-86adcd38c9c5.png)
+![image](https://user-images.githubusercontent.com/114710827/210674433-e0d781d2-35f8-409c-9abf-b7700921ead1.png)
 
 
 This website can be used to find and save exercises to use for

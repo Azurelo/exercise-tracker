@@ -54,11 +54,14 @@ searchButton.addEventListener('click', function(){
     createExerciseBtn.classList.add("button")
     createExerciseBtn.setAttribute('id','xbutton' + i);
     var exerciseData = document.createElement('div');
+    var instructionSpan = document.createElement('span');
+    instructionSpan.classList.add('hidden');
+    instructionSpan.textContent = result[i].instructions;
 
   
     // Setting the text of link and the href of the link
     exerciseData.textContent = result[i].name + ' | ' + result[i].difficulty;
-  
+  exerciseData.appendChild(instructionSpan);
     // Appending the link to the tabledata and then appending the tabledata to the tablerow
     // The tablerow then gets appended to the tablebody
     createExerciseBtn.appendChild(exerciseData);
@@ -66,7 +69,6 @@ searchButton.addEventListener('click', function(){
 
    var button0 = document.getElementById("xbutton0");
    if(button0){
-     console.log("chicken")
    button0.addEventListener("click", function() {
      saveButtonContent(this);
    });}
@@ -148,12 +150,18 @@ searchButton.addEventListener('click', function(){
     dropzone.addEventListener("drop", function(event) {
       // Prevent the default behavior (prevent the card from being dropped outside of the dropzone)
       event.preventDefault();
-
+      if (event.target.getAttribute('data-drop') === false) {
+        return;
+      }
       // Get the data type and the value of the drag data
       var data = event.dataTransfer.getData("text/plain");
 
       // Append the card to the dropzone
       event.target.appendChild(document.getElementById(data));
+      localStorage.setItem(data, JSON.stringify({
+        position: "dropzone",
+        content: event.target.textContent
+      }));
     });
   });
 
@@ -179,7 +187,6 @@ btn.addEventListener('click', function () {
       var counter = 0;
       function saveButtonContent(button) {
         button.classList.add("hidden");
-        console.log("Chicken")
         if (originalDiv.childNodes.length < 15){
         // Get the content of the button
         var buttonContent = button.innerHTML;
@@ -187,6 +194,7 @@ btn.addEventListener('click', function () {
         // Create a new card element
         var newCard = document.createElement("div");
         newCard.classList.add("card");
+        newCard.setAttribute("data-drop", false);
         newCard.setAttribute('id', counter);
         newCard.setAttribute("draggable","true");
         newCard.addEventListener("dragstart", function(event) {
@@ -210,7 +218,6 @@ btn.addEventListener('click', function () {
           originalDiv.appendChild(newCard);
         });
       } }
-
 
 
 /* function populateFromStorage(){
