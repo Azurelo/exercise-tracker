@@ -146,8 +146,15 @@ select{
   text-align: center;
 }
 
-.card:hover{
-  height: 50px;
+
+.card:active span.hidden {
+  display: block;
+  background-color: rgb(213, 213, 223);
+  color: black;
+}
+
+.card:active{
+  z-index: 1;
 }
 
 .dropzone {
@@ -156,6 +163,7 @@ select{
   height: auto;
   border: 1px solid black;
   border-radius: 5px;
+  font-size: large;
 
 }
 
